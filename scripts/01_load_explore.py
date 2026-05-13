@@ -2,10 +2,10 @@
 01_load_explore.py — Load each CSV, inspect structure, missing values, duplicates, and red flags
 """
 import numpy as np; np.random.seed(42)
+DATA_DIR = "../data"
 import pandas as pd
 import os
 
-DATA_DIR = "../data"
 files = [
     "hantavirus_clinical.csv",
     "hantavirus_environmental.csv",

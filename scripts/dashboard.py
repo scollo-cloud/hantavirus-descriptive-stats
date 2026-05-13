@@ -10,7 +10,6 @@ import os, sys, json, base64
 sys.path.insert(0, os.path.dirname(__file__))
 from helper import load_csv, kurtosis_description
 
-FIGS_DIR = "../figures"
 DASHBOARD_DIR = "../dashboard"
 os.makedirs(DASHBOARD_DIR, exist_ok=True)
 

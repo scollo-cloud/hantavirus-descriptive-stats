@@ -14,7 +14,6 @@ df = load_csv("hantavirus_country_yearly.csv")
 cfr = df["case_fatality_rate"].dropna()
 n = len(cfr)
 
-FIGS_DIR = "../figures"
 
 # ── 1. Box Plot ──
 fig, ax = plt.subplots(figsize=(10, 2.5))

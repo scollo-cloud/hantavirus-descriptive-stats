@@ -11,7 +11,6 @@ import os, sys
 sys.path.insert(0, os.path.dirname(__file__))
 from helper import load_csv, savefig
 
-FIGS_DIR = "../figures"
 df = load_csv("hantavirus_clinical.csv")
 
 # Use hospital_days by severity — the clearest example

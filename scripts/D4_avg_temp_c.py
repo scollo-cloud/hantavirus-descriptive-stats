@@ -14,7 +14,6 @@ df = load_csv("hantavirus_environmental.csv")
 temp = df["avg_temp_c"].dropna()
 n = len(temp)
 
-FIGS_DIR = "../figures"
 
 # ── 1. Box Plot ──
 fig, ax = plt.subplots(figsize=(10, 2.5))

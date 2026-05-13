@@ -2,11 +2,11 @@
 02_summary_stats.py — Summary statistics for every numeric column across all datasets
 """
 import numpy as np; np.random.seed(42)
+DATA_DIR = "../data"
 import pandas as pd
 from scipy import stats
 import os
 
-DATA_DIR = "../data"
 
 files = [
     "hantavirus_clinical.csv",

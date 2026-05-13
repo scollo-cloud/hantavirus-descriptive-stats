@@ -9,14 +9,11 @@ import seaborn as sns; sns.set_theme(style="whitegrid")
 from scipy import stats
 import os, sys
 sys.path.insert(0, os.path.dirname(__file__))
-from helper import load_csv, savefig, print_summary, normality_check
+from helper import load_csv, savefig, print_summary, normality_check, validate_positive
 
 df = load_csv("hantavirus_clinical.csv")
 inc = df["incubation_days"].dropna()
 n = len(inc)
-
-FIGS_DIR = "../figures"
-os.makedirs(FIGS_DIR, exist_ok=True)
 
 # ── 1. Box Plot ──
 fig, ax = plt.subplots(figsize=(10, 2.5))
@@ -88,6 +85,7 @@ axes[0].set_xlabel("Days")
 axes[0].set_ylabel("Frequency")
 
 # 4b. Log-transformed
+validate_positive(inc, "incubation_days")
 log_inc = np.log(inc)
 log_bins = int(np.sqrt(n))
 axes[1].hist(log_inc, bins=log_bins, color="darkorange", edgecolor="white", alpha=0.7)

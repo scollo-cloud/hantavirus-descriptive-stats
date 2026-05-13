@@ -8,13 +8,12 @@ import seaborn as sns; sns.set_theme(style="whitegrid")
 from scipy import stats
 import os, sys
 sys.path.insert(0, os.path.dirname(__file__))
-from helper import load_csv, savefig, print_summary, normality_check
+from helper import validate_positive, load_csv, savefig, print_summary, normality_check
 
 df = load_csv("hantavirus_environmental.csv")
 rain = df["rainfall_mm"].dropna()
 n = len(rain)
 
-FIGS_DIR = "../figures"
 
 # ── 1. Box Plot ──
 fig, ax = plt.subplots(figsize=(10, 2.5))

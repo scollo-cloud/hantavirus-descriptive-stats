@@ -8,13 +8,12 @@ import seaborn as sns; sns.set_theme(style="whitegrid")
 from scipy import stats
 import os, sys
 sys.path.insert(0, os.path.dirname(__file__))
-from helper import load_csv, savefig, print_summary, normality_check
+from helper import validate_positive, load_csv, savefig, print_summary, normality_check
 
 df = load_csv("hantavirus_clinical.csv")
 hosp = df["hospital_days"].dropna()
 n = len(hosp)
 
-FIGS_DIR = "../figures"
 
 # ── 1. Box Plot ──
 fig, ax = plt.subplots(figsize=(10, 2.5))
@@ -64,6 +63,7 @@ savefig("hospital_histogram")
 plt.close()
 
 # ── 4. Log-transformed histogram ──
+validate_positive(hosp, "hospital_days")
 log_hosp = np.log(hosp)
 log_bins = int(np.sqrt(n))
 

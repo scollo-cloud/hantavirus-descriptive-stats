@@ -14,7 +14,6 @@ df = load_csv("hantavirus_environmental.csv")
 rodent = df["rodent_abundance_index"].dropna()
 n = len(rodent)
 
-FIGS_DIR = "../figures"
 
 # ── 1. Box Plot ──
 fig, ax = plt.subplots(figsize=(10, 2.5))

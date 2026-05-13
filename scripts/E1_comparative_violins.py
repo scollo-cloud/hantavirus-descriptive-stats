@@ -10,7 +10,6 @@ import os, sys
 sys.path.insert(0, os.path.dirname(__file__))
 from helper import load_csv, savefig
 
-FIGS_DIR = "../figures"
 
 def make_violin(data_groups, group_names, title, xlabel, filename, colors=None, figsize=(10, 4)):
     fig, ax = plt.subplots(figsize=figsize)
