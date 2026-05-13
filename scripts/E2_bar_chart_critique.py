@@ -56,7 +56,7 @@ axes[1].set_ylabel("Hospital Days")
 axes[1].set_xlabel("Severity")
 
 plt.tight_layout()
-savefig("critique_bar_vs_violin")
+savefig("critique_bar_vs_violin", subdir="critique")
 plt.close()
 
 

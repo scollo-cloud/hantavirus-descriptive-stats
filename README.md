@@ -65,28 +65,15 @@ See `explanations/D1_mistakes_and_fixes.md` and `explanations/` for full details
 
 ```bash
 pip install -r requirements.txt
-cd scripts
-python3 01_load_explore.py        # Phase B1
-python3 02_summary_stats.py       # Phase B2
-python3 D1_incubation_days.py     # Phase D (one per variable)
-# ... D2 through D8
-python3 C_outlier_investigation.py # Phase C
-python3 E1_comparative_violins.py  # Phase E1
-python3 E2_bar_chart_critique.py   # Phase E2
-python3 F_summary_tables.py        # Phase F — generates tables/
+python3 main.py
 ```
 
-To compile reports:
+This will run the entire analysis pipeline, generate all figures in `figures/`, create the summary tables in `tables/`, and build the interactive dashboard in `dashboard/`.
+
+To manually compile reports:
 ```bash
 cd report
-pdflatex summary_report.tex
 pdflatex detailed_report.tex
-```
-
-To preview tables:
-```bash
-cd tables
-pdflatex tables_preview.tex
 ```
 
 All scripts use `np.random.seed(42)` for reproducibility.

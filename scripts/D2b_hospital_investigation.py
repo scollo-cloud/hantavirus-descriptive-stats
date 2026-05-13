@@ -41,7 +41,7 @@ axes[1].set_title("Hospital Days by Severity (Violin)")
 axes[1].set_xlabel("Days")
 
 plt.tight_layout()
-savefig("hospital_by_severity")
+savefig("hospital_by_severity", subdir="clinical")
 plt.close()
 
 # ── Hypothesis B: Split by Outcome ──
@@ -69,7 +69,7 @@ axes[1].set_title("Hospital Days by Outcome (Violin)")
 axes[1].set_xlabel("Days")
 
 plt.tight_layout()
-savefig("hospital_by_outcome")
+savefig("hospital_by_outcome", subdir="clinical")
 plt.close()
 
 # ── Hypothesis C: Split by Syndrome ──
@@ -97,7 +97,7 @@ axes[1].set_title("Hospital Days by Syndrome (Violin)")
 axes[1].set_xlabel("Days")
 
 plt.tight_layout()
-savefig("hospital_by_syndrome")
+savefig("hospital_by_syndrome", subdir="clinical")
 plt.close()
 
 # ── Hypothesis D: Split by Age Group ──
@@ -127,7 +127,7 @@ axes[1].set_title("Hospital Days by Age Group (Violin)")
 axes[1].set_xlabel("Days")
 
 plt.tight_layout()
-savefig("hospital_by_age")
+savefig("hospital_by_age", subdir="clinical")
 plt.close()
 
 # ── Print summary stats for each split ──

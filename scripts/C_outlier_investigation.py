@@ -7,7 +7,7 @@ import pandas as pd
 from scipy import stats
 import os, sys
 sys.path.insert(0, os.path.dirname(__file__))
-from helper import load_csv
+from helper import load_csv, iqr_outliers
 
 DECISIONS = []  # track keep/remove for each
 
@@ -16,7 +16,9 @@ def investigate(series, df, name, context_cols, is_count=False):
     iqr = q3 - q1
     lower = q1 - 1.5 * iqr
     upper = q3 + 1.5 * iqr
-    outliers = df[(series < lower) | (series > upper)]
+    
+    outliers_series = iqr_outliers(series)
+    outliers = df.loc[outliers_series.index]
     
     if len(outliers) == 0:
         print(f"\n  {name}: no outliers flagged")

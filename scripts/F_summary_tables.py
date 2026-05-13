@@ -6,18 +6,15 @@ import pandas as pd
 from scipy import stats
 import os, sys
 sys.path.insert(0, os.path.dirname(__file__))
-from helper import load_csv
-
-TABLES_DIR = "../tables"
-os.makedirs(TABLES_DIR, exist_ok=True)
+from helper import load_csv, TABLES_DIR, recommend_center, recommend_spread, iqr_outliers
 
 def latex_table(df, caption, label, filename):
     tex = df.to_latex(index=False, escape=False, float_format="%.3f",
                       caption=caption, label=label,
                       position="htbp")
-    with open(f"{TABLES_DIR}/{filename}", "w") as f:
+    with open(TABLES_DIR / filename, "w") as f:
         f.write(tex)
-    print(f"  Saved: {TABLES_DIR}/{filename}")
+    print(f"  Saved: {TABLES_DIR / filename}")
 
 # ── Table 1: Master Summary — all numeric variables ──
 df_clin = load_csv("hantavirus_clinical.csv")
@@ -40,12 +37,9 @@ for name, series in [
     skew_val = stats.skew(c)
     kurt_val = stats.kurtosis(c)
     
-    if abs(skew_val) < 0.5:
-        center = "Mean"
-        spread = "Std"
-    else:
-        center = "Median"
-        spread = "IQR"
+    center = recommend_center(c).split(" ")[0].capitalize()
+    spread = recommend_spread(c).split(" ")[0].capitalize()
+    if spread == "Standard": spread = "Std"
     
     rows.append({
         "Variable": name,
@@ -224,9 +218,7 @@ for name, series in [
     ("confirmed\\_cases", df_yr["confirmed_cases"]),
     ("case\\_fatality\\_rate", df_yr["case_fatality_rate"]),
 ]:
-    q1, q3 = series.quantile(0.25), series.quantile(0.75)
-    iqr = q3 - q1
-    outliers = series[(series < q1 - 1.5*iqr) | (series > q3 + 1.5*iqr)]
+    outliers = iqr_outliers(series)
     outliers_data.append({
         "Variable": name,
         "n outliers": len(outliers),

@@ -32,26 +32,36 @@ df_env = load_csv("hantavirus_environmental.csv")
 df_yr = load_csv("hantavirus_country_yearly.csv")
 
 # ════════════════════════════════════════════
-# SECTION: Introduction
+# SECTION: Introduction & Summary Stats
 # ════════════════════════════════════════════
-intro = """
+def get_metric_card(label, value, sub):
+    return f"""
+    <div class="metric-card">
+      <div class="metric-label">{label}</div>
+      <div class="metric-value">{value}</div>
+      <div class="metric-sub">{sub}</div>
+    </div>
+    """
+
+summary_cards = f"""
+<div class="metric-row">
+  {get_metric_card("Total Patients", f"{len(df_clin):,}", "Clinical Records")}
+  {get_metric_card("Avg Incubation", f"{df_clin['incubation_days'].mean():.1f}d", "across syndromes")}
+  {get_metric_card("Global CFR", f"{df_yr['case_fatality_rate'].mean()*100:.1f}%", "Syndrome-dependent")}
+  {get_metric_card("Max Rainfall", f"{df_env['rainfall_mm'].max():,.0f}mm", "biome extreme")}
+</div>
+"""
+
+intro = f"""
 <div class="hero">
   <h1>Hantavirus Descriptive Statistics</h1>
-  <p class="subtitle">A step-by-step analysis of distribution, central tendency, variability, and visualization</p>
+  <p class="subtitle">A deep dive into global epidemiological data with automated outlier detection and subgroup analysis.</p>
 </div>
+{summary_cards}
 <div class="card">
-  <p><strong>Data:</strong> <a href="https://www.kaggle.com/datasets/zkskhurram/hantavirus-andes-virus-global-epidemiology" target="_blank">Kaggle — Hantavirus Global Epidemiology</a> <em>(historical dataset, not 2025 outbreak data)</em></p>
-  <p><strong>Goal:</strong> Apply descriptive statistics concepts from textbook to real data — learn, make mistakes, fix them.</p>
-  <p><strong>Tools:</strong> Python (pandas, numpy, scipy, matplotlib, seaborn, plotly), LaTeX</p>
-</div>
-<div class="card">
-  <h3>Datasets</h3>
-  <table class="tbl">
-    <tr><th>File</th><th>Rows</th><th>Key Variables</th></tr>
-    <tr><td>hantavirus_clinical.csv</td><td>7,538</td><td>incubation_days, hospital_days, icu_days, severity, outcome</td></tr>
-    <tr><td>hantavirus_environmental.csv</td><td>896</td><td>avg_temp_c, rainfall_mm, rodent_abundance_index, biome</td></tr>
-    <tr><td>hantavirus_country_yearly.csv</td><td>939</td><td>confirmed_cases, case_fatality_rate, syndrome, country</td></tr>
-  </table>
+  <h2>Dashboard Overview</h2>
+  <p><strong>Goal:</strong> Transform raw global Hantavirus data into actionable insights through descriptive statistics.</p>
+  <p><strong>Data:</strong> <a href="https://www.kaggle.com/datasets/zkskhurram/hantavirus-andes-virus-global-epidemiology" target="_blank">Kaggle Global Epidemiology</a></p>
 </div>
 """
 add_section("intro", "Introduction", intro)
@@ -124,7 +134,7 @@ d1_html = f"""
 <div class="card">
   <h3>ECDF — Normal vs Log-Normal Overlay</h3>
   <p>The incubation data deviates from the normal CDF (red) but follows the log-normal CDF (green) more closely.</p>
-  <img src="../figures/incubation_ecdf.png" style="max-width:100%; border:1px solid #ddd; border-radius:4px;">
+  <img src="../figures/distributions/incubation_days_ecdf.png" style="max-width:100%; border:1px solid #ddd; border-radius:4px;">
 </div>
 """
 add_section("d1", "Incubation Days", d1_html)
@@ -145,7 +155,7 @@ d2_html = f"""
 </div>
 <div class="plot-row">
   <div>{fig_hosp.to_html(full_html=False, include_plotlyjs=False)}</div>
-  <div><img src="../figures/hospital_by_severity.png" style="max-width:100%; border:1px solid #ddd; border-radius:4px;"></div>
+  <div><img src="../figures/clinical/hospital_by_severity.png" style="max-width:100%; border:1px solid #ddd; border-radius:4px;"></div>
 </div>
 <div class="card">
   <table class="tbl">
@@ -181,8 +191,8 @@ d3_html = f"""
   <p><strong>Approach:</strong> Split into two questions: (1) Who goes to ICU? (binary), (2) How long do they stay? (non-zero only).</p>
 </div>
 <div class="plot-row">
-  <div><img src="../figures/icu_split.png" style="max-width:100%; border:1px solid #ddd; border-radius:4px;"></div>
-  <div><img src="../figures/icu_by_severity.png" style="max-width:100%; border:1px solid #ddd; border-radius:4px;"></div>
+  <div><img src="../figures/clinical/icu_split.png" style="max-width:100%; border:1px solid #ddd; border-radius:4px;"></div>
+  <div><img src="../figures/clinical/icu_by_severity.png" style="max-width:100%; border:1px solid #ddd; border-radius:4px;"></div>
 </div>
 """
 add_section("d3", "ICU Days", d3_html)
@@ -201,8 +211,8 @@ env_html = f"""
   <p>Only outlier: -8.8°C in Ostrobothnia, Finland (real, kept).</p>
 </div>
 <div class="plot-row">
-  <div><img src="../figures/temp_histogram.png" style="max-width:100%; border:1px solid #ddd; border-radius:4px;"></div>
-  <div><img src="../figures/temp_qq.png" style="max-width:100%; border:1px solid #ddd; border-radius:4px;"></div>
+  <div><img src="../figures/distributions/avg_temp_c_histogram.png" style="max-width:100%; border:1px solid #ddd; border-radius:4px;"></div>
+  <div><img src="../figures/distributions/avg_temp_c_qq.png" style="max-width:100%; border:1px solid #ddd; border-radius:4px;"></div>
 </div>
 
 <div class="card">
@@ -210,8 +220,8 @@ env_html = f"""
   <p><strong>Finding:</strong> Right-skewed (skew={stats.skew(rain):.2f}), heavy-tailed (kurtosis={stats.kurtosis(rain):.2f}). Biome explains 10x variation.</p>
 </div>
 <div class="plot-row">
-  <div><img src="../figures/rain_histogram.png" style="max-width:100%; border:1px solid #ddd; border-radius:4px;"></div>
-  <div><img src="../figures/rain_by_biome.png" style="max-width:100%; border:1px solid #ddd; border-radius:4px;"></div>
+  <div><img src="../figures/distributions/rainfall_mm_histogram.png" style="max-width:100%; border:1px solid #ddd; border-radius:4px;"></div>
+  <div><img src="../figures/comparative/compare_rain_biome.png" style="max-width:100%; border:1px solid #ddd; border-radius:4px;"></div>
 </div>
 
 <div class="card">
@@ -220,8 +230,8 @@ env_html = f"""
   <p><strong>Caveat:</strong> This assumes comparable sampling protocols across biomes.</p>
 </div>
 <div class="plot-row">
-  <div><img src="../figures/rodent_histogram.png" style="max-width:100%; border:1px solid #ddd; border-radius:4px;"></div>
-  <div><img src="../figures/rodent_by_biome.png" style="max-width:100%; border:1px solid #ddd; border-radius:4px;"></div>
+  <div><img src="../figures/distributions/rodent_abundance_index_histogram.png" style="max-width:100%; border:1px solid #ddd; border-radius:4px;"></div>
+  <div><img src="../figures/distributions/rodent_abundance_index_qq.png" style="max-width:100%; border:1px solid #ddd; border-radius:4px;"></div>
 </div>
 """
 add_section("env", "Environmental", env_html)
@@ -240,8 +250,8 @@ d7_html = f"""
   <p><strong>Tail driven by:</strong> China HFRS (17k–24k cases/year, consistently since 1970s).</p>
 </div>
 <div class="plot-row">
-  <div><img src="../figures/cases_by_syndrome.png" style="max-width:100%; border:1px solid #ddd; border-radius:4px;"></div>
-  <div><img src="../figures/cases_nooutliers_boxplot.png" style="max-width:100%; border:1px solid #ddd; border-radius:4px;"></div>
+  <div><img src="../figures/comparative/compare_cases_syndrome.png" style="max-width:100%; border:1px solid #ddd; border-radius:4px;"></div>
+  <div><img src="../figures/boxplots/confirmed_cases_boxplot.png" style="max-width:100%; border:1px solid #ddd; border-radius:4px;"></div>
 </div>
 <div class="card">
   <table class="tbl">
@@ -267,8 +277,8 @@ add_section("d8", "CFR", f"""
   <p><strong>Note:</strong> Differences may partly reflect healthcare access, not just virology.</p>
 </div>
 <div class="plot-row">
-  <div><img src="../figures/cfr_combined.png" style="max-width:100%; border:1px solid #ddd; border-radius:4px;"></div>
-  <div><img src="../figures/cfr_by_syndrome.png" style="max-width:100%; border:1px solid #ddd; border-radius:4px;"></div>
+  <div><img src="../figures/distributions/case_fatality_rate_histogram.png" style="max-width:100%; border:1px solid #ddd; border-radius:4px;"></div>
+  <div><img src="../figures/comparative/compare_cases_syndrome.png" style="max-width:100%; border:1px solid #ddd; border-radius:4px;"></div>
 </div>
 """)
 
@@ -289,8 +299,8 @@ add_section("compare", "Comparisons", """
   </ul>
 </div>
 <div class="plot-row">
-  <div><img src="../figures/compare_incubation_severity.png" style="max-width:100%; border:1px solid #ddd; border-radius:4px;"></div>
-  <div><img src="../figures/compare_incubation_syndrome.png" style="max-width:100%; border:1px solid #ddd; border-radius:4px;"></div>
+  <div><img src="../figures/comparative/compare_incubation_severity.png" style="max-width:100%; border:1px solid #ddd; border-radius:4px;"></div>
+  <div><img src="../figures/comparative/compare_incubation_syndrome.png" style="max-width:100%; border:1px solid #ddd; border-radius:4px;"></div>
 </div>
 """)
 
@@ -303,7 +313,7 @@ add_section("critique", "Bar Critique", """
   <p>The bar chart (left) hides: sample size, distribution shape, multimodality, outliers, and the fact that mean ± SE assumes normal symmetry.</p>
   <p>The violin + box (right) shows: n, min, Q1, median, Q3, max, shape, skew, tails.</p>
 </div>
-<img src="../figures/critique_bar_vs_violin.png" style="max-width:100%; border:1px solid #ddd; border-radius:4px; margin-top:10px;">
+<img src="../figures/critique/critique_bar_vs_violin.png" style="max-width:100%; border:1px solid #ddd; border-radius:4px; margin-top:10px;">
 """)
 
 # ════════════════════════════════════════════
@@ -339,45 +349,295 @@ html = f"""<!DOCTYPE html>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Hantavirus Descriptive Statistics Dashboard</title>
 <script src="https://cdn.plot.ly/plotly-3.0.1.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
+:root {{
+  --primary: #2563eb;
+  --primary-dark: #1d4ed8;
+  --secondary: #64748b;
+  --bg: #f8fafc;
+  --card-bg: #ffffff;
+  --text: #1e293b;
+  --text-light: #64748b;
+  --border: #e2e8f0;
+  --sidebar-width: 260px;
+  --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}}
+
 * {{ margin: 0; padding: 0; box-sizing: border-box; }}
-body {{ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f5f5f5; color: #333; }}
-.navbar {{ background: #2c3e50; padding: 12px 20px; position: sticky; top: 0; z-index: 100; display: flex; flex-wrap: wrap; gap: 4px; }}
-.navbar a {{ color: #ecf0f1; text-decoration: none; padding: 6px 14px; border-radius: 4px; font-size: 13px; }}
-.navbar a:hover {{ background: #34495e; }}
-.container {{ max-width: 1100px; margin: 0 auto; padding: 20px; }}
-.section {{ display: none; }}
+
+body {{
+  font-family: 'Inter', -apple-system, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  display: flex;
+  min-height: 100vh;
+}}
+
+/* Sidebar */
+.sidebar {{
+  width: var(--sidebar-width);
+  background: #1e293b;
+  color: white;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  padding: 24px 0;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  box-shadow: 4px 0 10px rgba(0,0,0,0.1);
+}}
+
+.sidebar-header {{
+  padding: 0 24px 24px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  margin-bottom: 24px;
+}}
+
+.sidebar-header h2 {{
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  color: #f8fafc;
+}}
+
+.nav-links {{
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  flex: 1;
+}}
+
+.nav-links a {{
+  padding: 12px 24px;
+  color: #94a3b8;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}}
+
+.nav-links a:hover {{
+  background: rgba(255,255,255,0.05);
+  color: white;
+}}
+
+.nav-links a.active {{
+  background: var(--primary);
+  color: white;
+}}
+
+/* Main Content */
+.main-content {{
+  flex: 1;
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}}
+
+.section {{ display: none; animation: fadeIn 0.4s ease-out; }}
 .section.active {{ display: block; }}
-.hero {{ background: linear-gradient(135deg, #2c3e50, #3498db); color: white; padding: 40px; border-radius: 8px; margin-bottom: 20px; }}
-.hero h1 {{ font-size: 28px; margin-bottom: 8px; }}
-.hero .subtitle {{ font-size: 16px; opacity: 0.9; }}
-.card {{ background: white; border-radius: 8px; padding: 20px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }}
-.card h2 {{ font-size: 20px; margin-bottom: 10px; color: #2c3e50; }}
-.card h3 {{ font-size: 16px; margin-bottom: 8px; color: #34495e; }}
-.card p {{ margin-bottom: 8px; line-height: 1.5; }}
-.card ul {{ margin-left: 20px; margin-bottom: 10px; }}
-.card li {{ margin-bottom: 4px; line-height: 1.4; }}
-.plot-row {{ display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 16px; }}
-.plot-row > div {{ flex: 1; min-width: 300px; background: white; border-radius: 8px; padding: 10px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }}
-.tbl {{ width: 100%; border-collapse: collapse; font-size: 13px; }}
-.tbl th {{ background: #2c3e50; color: white; padding: 8px 10px; text-align: left; }}
-.tbl td {{ padding: 6px 10px; border-bottom: 1px solid #ddd; }}
-.tbl tr:nth-child(even) {{ background: #f9f9f9; }}
-.table-wrap {{ overflow-x: auto; }}
-a {{ color: #3498db; }}
-@media (max-width: 768px) {{ .navbar a {{ font-size: 11px; padding: 4px 8px; }} .hero h1 {{ font-size: 22px; }} }}
+
+@keyframes fadeIn {{
+  from {{ opacity: 0; transform: translateY(10px); }}
+  to {{ opacity: 1; transform: translateY(0); }}
+}}
+
+/* Components */
+.hero {{
+  background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+  color: white;
+  padding: 60px 40px;
+  border-radius: 16px;
+  margin-bottom: 32px;
+  box-shadow: var(--shadow-lg);
+}}
+
+.hero h1 {{
+  font-size: 36px;
+  font-weight: 800;
+  margin-bottom: 12px;
+  letter-spacing: -0.025em;
+}}
+
+.hero p {{
+  font-size: 18px;
+  opacity: 0.9;
+  max-width: 700px;
+}}
+
+.card {{
+  background: var(--card-bg);
+  border-radius: 16px;
+  padding: 32px;
+  margin-bottom: 24px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  transition: transform 0.2s, box-shadow 0.2s;
+}}
+
+.card:hover {{
+  box-shadow: var(--shadow-lg);
+}}
+
+.card h2 {{
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #0f172a;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}}
+
+.card h2::before {{
+  content: '';
+  display: inline-block;
+  width: 4px;
+  height: 24px;
+  background: var(--primary);
+  border-radius: 2px;
+}}
+
+.plot-row {{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 24px;
+  margin-bottom: 24px;
+}}
+
+.metric-row {{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-bottom: 32px;
+}}
+
+.metric-card {{
+  background: white;
+  padding: 24px;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  text-align: center;
+}}
+
+.metric-label {{
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-light);
+  margin-bottom: 8px;
+}}
+
+.metric-value {{
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--primary);
+  margin-bottom: 4px;
+}}
+
+.metric-sub {{
+  font-size: 12px;
+  color: var(--text-light);
+}}
+
+.plot-container p.caption {{
+  font-size: 14px;
+  color: var(--text-light);
+  margin-top: 12px;
+  font-style: italic;
+  text-align: center;
+}}
+
+
+/* Tables */
+.table-wrap {{
+  overflow-x: auto;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  margin-top: 16px;
+}}
+
+.tbl {{
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}}
+
+.tbl th {{
+  background: #f8fafc;
+  color: #475569;
+  font-weight: 600;
+  text-align: left;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border);
+}}
+
+.tbl td {{
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border);
+  color: #1e293b;
+}}
+
+.tbl tr:last-child td {{ border-bottom: none; }}
+.tbl tr:hover {{ background: #f1f5f9; }}
+
+.badge {{
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  background: #e2e8f0;
+}}
+
+.badge-primary {{ background: #dbeafe; color: #1e40af; }}
+
+.badge-primary {{ background: #dbeafe; color: #1e40af; }}
+
+@media (max-width: 1024px) {{
+  body {{ flex-direction: column; }}
+  .sidebar {{ width: 100%; height: auto; position: static; }}
+  .sidebar-header {{ padding-bottom: 12px; margin-bottom: 12px; }}
+  .nav-links {{ flex-direction: row; flex-wrap: wrap; padding: 0 12px; }}
+  .nav-links a {{ padding: 8px 16px; }}
+  .main-content {{ padding: 20px; }}
+  .plot-row {{ grid-template-columns: 1fr; }}
+}}
 </style>
 </head>
 <body>
 
-<div class="navbar">{nav_links}</div>
-<div class="container">{all_sections}</div>
+<div class="sidebar">
+  <div class="sidebar-header">
+    <h2>Hantavirus Stats</h2>
+  </div>
+  <div class="nav-links">
+    {nav_links}
+  </div>
+</div>
+
+<div class="main-content">
+  {all_sections}
+</div>
 
 <script>
 function showSection(id) {{
   document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+  
   document.getElementById(id).classList.add('active');
-  window.scrollTo({{top: 0}});
+  const activeLink = Array.from(document.querySelectorAll('.nav-links a')).find(a => a.getAttribute('onclick').includes(id));
+  if (activeLink) activeLink.classList.add('active');
+  
+  window.scrollTo({{top: 0, behavior: 'smooth'}});
 }}
 showSection('intro');
 </script>

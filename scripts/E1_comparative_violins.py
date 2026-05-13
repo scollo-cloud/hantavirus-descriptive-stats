@@ -36,7 +36,7 @@ def make_violin(data_groups, group_names, title, xlabel, filename, colors=None, 
     ax.set_xlabel(xlabel)
     fig.subplots_adjust(left=0.3)
     plt.tight_layout()
-    savefig(filename)
+    savefig(filename, subdir="comparative")
     plt.close()
 
 # ── 1. incubation_days by severity ──
@@ -107,7 +107,7 @@ axes[1].set_yticklabels([f"HPS (n={len(hps_cases)})", f"HFRS (no outliers, n={le
 axes[1].set_title("Confirmed Cases by Syndrome — HFRS Outliers Removed")
 axes[1].set_xlabel("Cases")
 plt.tight_layout()
-savefig("compare_cases_syndrome")
+savefig("compare_cases_syndrome", subdir="comparative")
 plt.close()
 
 print(f"\n  Cases by syndrome:")

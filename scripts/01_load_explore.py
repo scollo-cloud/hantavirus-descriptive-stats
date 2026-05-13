@@ -6,7 +6,7 @@ import sys
 sys.path.insert(0, os.path.dirname(__file__))
 
 import pandas as pd
-from helper import DATA_DIR
+from helper import DATA_DIR, load_csv
 
 files = [
     "hantavirus_clinical.csv",
@@ -21,12 +21,11 @@ files = [
 ]
 
 for f in files:
-    path = DATA_DIR / f
-    if not path.exists():
-        print(f"  ⚠ File not found: {path}")
+    try:
+        df = load_csv(f)
+    except (FileNotFoundError, ValueError) as e:
+        print(f"  ⚠ {e}")
         continue
-
-    df = pd.read_csv(path)
     print(f"\n{'='*60}")
     print(f"  File: {f}")
     print(f"  Shape: {df.shape[0]} rows × {df.shape[1]} cols")

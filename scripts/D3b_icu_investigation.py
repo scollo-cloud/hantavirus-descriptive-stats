@@ -40,7 +40,7 @@ axes[1].set_title("ICU Admission Rate by Severity")
 axes[1].set_ylabel("Proportion admitted to ICU")
 axes[1].set_ylim(0, 1)
 plt.tight_layout()
-savefig("icu_by_admission")
+savefig("icu_by_admission", subdir="clinical")
 plt.close()
 
 # ── Part 2: ICU days (>0) split by severity ──
@@ -70,7 +70,7 @@ axes[1].set_yticklabels(order_sev)
 axes[1].set_title("ICU Days (>0) by Severity (Violin)")
 axes[1].set_xlabel("ICU Days")
 plt.tight_layout()
-savefig("icu_by_severity")
+savefig("icu_by_severity", subdir="clinical")
 plt.close()
 
 # ── Part 3: Overlaid histogram: all vs non-zero only ──
@@ -95,7 +95,7 @@ axes[1].axvline(icu_nonzero.mean(), color="blue", linestyle="--", label=f"Mean={
 axes[1].axvline(icu_nonzero.median(), color="red", linestyle="-", label=f"Median={icu_nonzero.median():.0f}")
 axes[1].legend()
 plt.tight_layout()
-savefig("icu_split")
+savefig("icu_split", subdir="clinical")
 
 plt.close()
 
@@ -106,7 +106,7 @@ axes[0].set_title("Q-Q Plot — All ICU Days (zero spike dominates)")
 stats.probplot(icu_nonzero, dist="norm", plot=axes[1])
 axes[1].set_title("Q-Q Plot — ICU Days > 0 Only")
 plt.tight_layout()
-savefig("icu_qq_split")
+savefig("icu_qq_split", subdir="clinical")
 plt.close()
 
 # ── Print summary ──
