@@ -1,0 +1,36 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=2cm]{geometry}
+\usepackage{booktabs, caption, graphicx, adjustbox, hyperref}
+\hypersetup{colorlinks=true, linkcolor=blue}
+\begin{document}
+\title{Summary Tables Preview}
+\maketitle
+
+\section{Master Summary}
+\begin{table}[htbp]\centering\resizebox{\textwidth}{!}{\input{../tables/master_summary.tex}}\end{table}
+
+\section{Hospital by Severity}
+\begin{table}[htbp]\centering\resizebox{\textwidth}{!}{\input{../tables/hospital_by_severity.tex}}\end{table}
+
+\section{ICU by Severity}
+\begin{table}[htbp]\centering\resizebox{\textwidth}{!}{\input{../tables/icu_by_severity.tex}}\end{table}
+
+\section{CFR by Syndrome}
+\begin{table}[htbp]\centering\resizebox{\textwidth}{!}{\input{../tables/cfr_by_syndrome.tex}}\end{table}
+
+\section{Cases by Region}
+\begin{table}[htbp]\centering\resizebox{\textwidth}{!}{\input{../tables/cases_by_region.tex}}\end{table}
+
+\section{Incubation by Groups}
+\begin{table}[htbp]\centering\resizebox{\textwidth}{!}{\input{../tables/incubation_by_groups.tex}}\end{table}
+
+\section{Environmental by Biome}
+\begin{table}[htbp]\centering\resizebox{\textwidth}{!}{\input{../tables/environmental_by_biome.tex}}\end{table}
+
+\section{Mistakes Summary}
+\begin{table}[htbp]\centering\resizebox{\textwidth}{!}{\input{../tables/mistakes_summary.tex}}\end{table}
+
+\section{Outlier Summary}
+\begin{table}[htbp]\centering\resizebox{\textwidth}{!}{\input{../tables/outlier_summary.tex}}\end{table}
+
+\end{document}

@@ -1,0 +1,891 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2026.5.9)  13 MAY 2026 16:10
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**detailed_report.tex
+(./detailed_report.tex
+LaTeX2e <2021-11-15> patch level 1
+L3 programming layer <2022-01-21>
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size11.clo
+File: size11.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count185
+\c@section=\count186
+\c@subsection=\count187
+\c@subsubsection=\count188
+\c@paragraph=\count189
+\c@subparagraph=\count190
+\c@figure=\count191
+\c@table=\count192
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen138
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2021/02/14 v1.3d Input encoding file
+\inpenc@prehook=\toks16
+\inpenc@posthook=\toks17
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+)
+(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks18
+)
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2020/03/06 v1.0d TeX engine tests
+))
+\Gm@cnth=\count193
+\Gm@cntv=\count194
+\c@Gm@tempcnt=\count195
+\Gm@bindingoffset=\dimen139
+\Gm@wd@mp=\dimen140
+\Gm@odd@mp=\dimen141
+\Gm@even@mp=\dimen142
+\Gm@layoutwidth=\dimen143
+\Gm@layoutheight=\dimen144
+\Gm@layouthoffset=\dimen145
+\Gm@layoutvoffset=\dimen146
+\Gm@dimlist=\toks19
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2021/03/04 v1.4d Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen147
+\Gin@req@width=\dimen148
+)
+(/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen149
+\lightrulewidth=\dimen150
+\cmidrulewidth=\dimen151
+\belowrulesep=\dimen152
+\belowbottomsep=\dimen153
+\aboverulesep=\dimen154
+\abovetopsep=\dimen155
+\cmidrulesep=\dimen156
+\cmidrulekern=\dimen157
+\defaultaddspace=\dimen158
+\@cmidla=\count196
+\@cmidlb=\count197
+\@aboverulesep=\dimen159
+\@belowrulesep=\dimen160
+\@thisruleclass=\count198
+\@lastruleclass=\count199
+\@thisrulewidth=\dimen161
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2021/10/15 v2.17l AMS math features
+\@mathmargin=\skip49
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks20
+\ex@=\dimen162
+))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen163
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2021/08/26 v2.02 operator names
+)
+\inf@bad=\count266
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count267
+\leftroot@=\count268
+LaTeX Info: Redefining \overline on input line 399.
+\classnum@=\count269
+\DOTSCASE@=\count270
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box50
+\strutbox@=\box51
+\big@size=\dimen164
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count271
+\c@MaxMatrixCols=\count272
+\dotsspace@=\muskip16
+\c@parentequation=\count273
+\dspbrk@lvl=\count274
+\tag@help=\toks21
+\row@=\count275
+\column@=\count276
+\maxfields@=\count277
+\andhelp@=\toks22
+\eqnshift@=\dimen165
+\alignsep@=\dimen166
+\tagshift@=\dimen167
+\tagwidth@=\dimen168
+\totwidth@=\dimen169
+\lineht@=\dimen170
+\@envbody=\toks23
+\multlinegap=\skip50
+\multlinetaggap=\skip51
+\mathdisplay@stack=\toks24
+LaTeX Info: Redefining \[ on input line 2938.
+LaTeX Info: Redefining \] on input line 2939.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2021-06-07 v7.00m Hypertext links for LaTeX
+
+(/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/auxhook/auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
+)
+\@linkdim=\dimen171
+\Hy@linkcounter=\count278
+\Hy@pagecounter=\count279
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2021-06-07 v7.00m Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref-langpatches.def
+File: hyperref-langpatches.def 2021-06-07 v7.00m Hyperref: patches for babel la
+nguages
+)
+(/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count280
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2021-06-07 v7.00m Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Hyper figures OFF on input line 4192.
+Package hyperref Info: Link nesting OFF on input line 4197.
+Package hyperref Info: Hyper index ON on input line 4200.
+Package hyperref Info: Plain pages OFF on input line 4207.
+Package hyperref Info: Backreferencing OFF on input line 4212.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4445.
+\c@Hy@tempcnt=\count281
+
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4804.
+\XeTeXLinkMargin=\dimen172
+
+(/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count282
+\Field@Width=\dimen173
+\Fld@charsize=\dimen174
+Package hyperref Info: Hyper figures OFF on input line 6076.
+Package hyperref Info: Link nesting OFF on input line 6081.
+Package hyperref Info: Hyper index ON on input line 6084.
+Package hyperref Info: backreferencing OFF on input line 6091.
+Package hyperref Info: Link coloring OFF on input line 6096.
+Package hyperref Info: Link coloring with OCG OFF on input line 6101.
+Package hyperref Info: PDF/A mode OFF on input line 6106.
+LaTeX Info: Redefining \ref on input line 6146.
+LaTeX Info: Redefining \pageref on input line 6150.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+\Hy@abspage=\count283
+\c@Item=\count284
+\c@Hfootnote=\count285
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2021-06-07 v7.00m Hyperref driver for pdfTeX
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
+kage
+with kernel methods
+)
+\Fld@listcount=\count286
+\c@bookmark@seq@number=\count287
+
+(/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+86.
+)
+\Hy@SectionHShift=\skip52
+)
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count288
+\float@exts=\toks25
+\float@box=\box52
+\@float@everytoks=\toks26
+\@floatcapt=\box53
+)
+(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/adjustbox.sty
+Package: adjustbox 2020/08/19 v1.3 Adjusting TeX boxes (trim, clip, ...)
+
+(/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2020/11/20 v2.8 package option processing (HA)
+
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks27
+\XKV@tempa@toks=\toks28
+)
+\XKV@depth=\count289
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/adjcalc.sty
+Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
+-ends (calc, etex, pgfmath)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/trimclip.sty
+Package: trimclip 2020/08/19 v1.2 Trim and clip general TeX material
+
+(/usr/share/texlive/texmf-dist/tex/latex/collectbox/collectbox.sty
+Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
+\collectedbox=\box54
+)
+\tc@llx=\dimen175
+\tc@lly=\dimen176
+\tc@urx=\dimen177
+\tc@ury=\dimen178
+Package trimclip Info: Using driver 'tc-pdftex.def'.
+
+(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/tc-pdftex.def
+File: tc-pdftex.def 2019/01/04 v2.2 Clipping driver for pdftex
+))
+\adjbox@Width=\dimen179
+\adjbox@Height=\dimen180
+\adjbox@Depth=\dimen181
+\adjbox@Totalheight=\dimen182
+\adjbox@pwidth=\dimen183
+\adjbox@pheight=\dimen184
+\adjbox@pdepth=\dimen185
+\adjbox@ptotalheight=\dimen186
+
+(/usr/share/texlive/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
+Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
+\c@checkoddpage=\count290
+)
+(/usr/share/texlive/texmf-dist/tex/latex/varwidth/varwidth.sty
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box55
+\sift@deathcycles=\count291
+\@vwid@loff=\dimen187
+\@vwid@roff=\dimen188
+))
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2020/10/26 v3.5g Customizing captions (AR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
+\captionmargin=\dimen189
+\captionmargin@=\dimen190
+\captionwidth=\dimen191
+\caption@tempdima=\dimen192
+\caption@indent=\dimen193
+\caption@parindent=\dimen194
+\caption@hangindent=\dimen195
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count292
+\c@continuedfloat=\count293
+Package caption Info: float package is loaded.
+Package caption Info: hyperref package is loaded.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2021/10/31 v2.13 LaTeX color extensions (UK)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 227.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1352.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1356.
+Package xcolor Info: Model `RGB' extended on input line 1368.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1370.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1371.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1372.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1373.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1374.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1375.
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 7.
+
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2022-01-12 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count294
+\l__pdf_internal_box=\box56
+)
+(./detailed_report.aux)
+\openout1 = `detailed_report.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(56.9055pt, 483.69687pt, 56.9055pt)
+* v-part:(T,H,B)=(56.9055pt, 731.23584pt, 56.9055pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=483.69687pt
+* \textheight=731.23584pt
+* \oddsidemargin=-15.36449pt
+* \evensidemargin=-15.36449pt
+* \topmargin=-52.36449pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=11.0pt
+* \footskip=30.0pt
+* \marginparwidth=50.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count295
+\scratchdimen=\dimen196
+\scratchbox=\box57
+\nofMPsegments=\count296
+\nofMParguments=\count297
+\everyMPshowfont=\toks29
+\MPscratchCnt=\count298
+\MPscratchDim=\dimen197
+\MPnumerator=\count299
+\makeMPintoPDFobject=\count300
+\everyMPtoPDFconversion=\toks30
+) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+Package hyperref Info: Link coloring ON on input line 15.
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
+
+(/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count301
+)
+LaTeX Info: Redefining \ref on input line 15.
+LaTeX Info: Redefining \pageref on input line 15.
+LaTeX Info: Redefining \nameref on input line 15.
+
+(./detailed_report.out) (./detailed_report.out)
+\@outlinefile=\write3
+\openout3 = `detailed_report.out'.
+
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 2
+6.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+Overfull \hbox (97.28734pt too wide) in paragraph at lines 26--27
+\T1/cmr/m/n/10.95 Data is from Kag-gle: \T1/cmtt/m/n/10.95 https://www.kaggle.c
+om/datasets/zkskhurram/hantavirus-andes-virus-global-epidemiology 
+ []
+
+[1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <12> not available
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 78.
+ [2]
+LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <14.4> not available
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 106.
+
+(../tables/outlier_summary.tex
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \begin{table}[htbp]
+                       
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.8 incubation_
+               days & 0 & 0.0\% & — \\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Extra }, or forgotten $.
+<template> \unskip \hfil }
+                          \hskip \tabcolsep \endtemplate 
+l.8 incubation_days &
+                      0 & 0.0\% & — \\
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.8 incubation_days &
+                      0 & 0.0\% & — \\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.8 incubation_days &
+                      0 & 0.0\% & — \\
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.9 hospital_
+             days & 0 & 0.0\% & — \\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Extra }, or forgotten $.
+<template> \unskip \hfil }
+                          \hskip \tabcolsep \endtemplate 
+l.9 hospital_days &
+                    0 & 0.0\% & — \\
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.9 hospital_days &
+                    0 & 0.0\% & — \\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.9 hospital_days &
+                    0 & 0.0\% & — \\
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.10 icu_
+         days & 432 & 5.7\% & Keep (real) \\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Extra }, or forgotten $.
+<template> \unskip \hfil }
+                          \hskip \tabcolsep \endtemplate 
+l.10 icu_days &
+                432 & 5.7\% & Keep (real) \\
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.10 icu_days &
+                432 & 5.7\% & Keep (real) \\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.10 icu_days &
+                432 & 5.7\% & Keep (real) \\
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+)
+Overfull \hbox (0.73892pt too wide) in paragraph at lines 113--116
+ [][] 
+ []
+
+[3]
+LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10.95> not available
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 148.
+<../figures//incubation_violin.png, id=137, 590.6868pt x 232.7094pt>
+File: ../figures//incubation_violin.png Graphic file (type png)
+<use ../figures//incubation_violin.png>
+Package pdftex.def Info: ../figures//incubation_violin.png  used on input line 
+185.
+(pdftex.def)             Requested size: 411.14528pt x 161.98288pt.
+<../figures//incubation_histogram.png, id=139, 998.7714pt x 275.1078pt>
+File: ../figures//incubation_histogram.png Graphic file (type png)
+<use ../figures//incubation_histogram.png>
+Package pdftex.def Info: ../figures//incubation_histogram.png  used on input li
+ne 191.
+(pdftex.def)             Requested size: 411.14528pt x 113.24828pt.
+<../figures//incubation_ecdf.png, id=140, 504.9264pt x 288.1164pt>
+File: ../figures//incubation_ecdf.png Graphic file (type png)
+<use ../figures//incubation_ecdf.png>
+Package pdftex.def Info: ../figures//incubation_ecdf.png  used on input line 19
+7.
+(pdftex.def)             Requested size: 338.58632pt x 193.20403pt.
+<../figures//incubation_qq.png, id=141, 398.4486pt x 412.9026pt>
+File: ../figures//incubation_qq.png Graphic file (type png)
+<use ../figures//incubation_qq.png>
+Package pdftex.def Info: ../figures//incubation_qq.png  used on input line 204.
+
+(pdftex.def)             Requested size: 266.03474pt x 275.69194pt.
+ [4] [5 <../figures//incubation_violin.png> <../figures//incubation_histogram.p
+ng> <../figures//incubation_ecdf.png>] [6 <../figures//incubation_qq.png>]
+<../figures//hospital_histogram.png, id=174, 998.7714pt x 275.1078pt>
+File: ../figures//hospital_histogram.png Graphic file (type png)
+<use ../figures//hospital_histogram.png>
+Package pdftex.def Info: ../figures//hospital_histogram.png  used on input line
+ 227.
+(pdftex.def)             Requested size: 411.14528pt x 113.24828pt.
+
+(../tables/hospital_by_severity.tex
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \begin{table}[htbp]
+                       
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+)
+Overfull \hbox (0.73892pt too wide) in paragraph at lines 235--238
+ [][] 
+ []
+
+<../figures//hospital_by_severity.png, id=175, 998.7714pt x 347.3778pt>
+File: ../figures//hospital_by_severity.png Graphic file (type png)
+<use ../figures//hospital_by_severity.png>
+Package pdftex.def Info: ../figures//hospital_by_severity.png  used on input li
+ne 255.
+(pdftex.def)             Requested size: 411.14528pt x 142.99828pt.
+[7 <../figures//hospital_histogram.png> <../figures//hospital_by_severity.png>]
+(../tables/icu_by_severity.tex
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \begin{table}[htbp]
+                       
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+)
+Overfull \hbox (0.73892pt too wide) in paragraph at lines 270--273
+ [][] 
+ []
+
+<../figures//icu_histogram.png, id=187, 998.7714pt x 275.1078pt>
+File: ../figures//icu_histogram.png Graphic file (type png)
+<use ../figures//icu_histogram.png>
+Package pdftex.def Info: ../figures//icu_histogram.png  used on input line 277.
+
+(pdftex.def)             Requested size: 411.14528pt x 113.24828pt.
+<../figures//temp_histogram.png, id=188, 508.299pt x 288.1164pt>
+File: ../figures//temp_histogram.png Graphic file (type png)
+<use ../figures//temp_histogram.png>
+Package pdftex.def Info: ../figures//temp_histogram.png  used on input line 290
+.
+(pdftex.def)             Requested size: 411.14528pt x 233.05206pt.
+<../figures//temp_qq.png, id=189, 398.4486pt x 399.4122pt>
+File: ../figures//temp_qq.png Graphic file (type png)
+<use ../figures//temp_qq.png>
+Package pdftex.def Info: ../figures//temp_qq.png  used on input line 296.
+(pdftex.def)             Requested size: 338.58632pt x 339.41055pt.
+[8 <../figures//icu_histogram.png> <../figures//temp_histogram.png>]
+<../figures//rain_histogram.png, id=201, 998.7714pt x 275.1078pt>
+File: ../figures//rain_histogram.png Graphic file (type png)
+<use ../figures//rain_histogram.png>
+Package pdftex.def Info: ../figures//rain_histogram.png  used on input line 314
+.
+(pdftex.def)             Requested size: 411.14528pt x 113.24828pt.
+ [9 <../figures//temp_qq.png> <../figures//rain_histogram.png>]
+<../figures//cases_histogram.png, id=210, 524.6802pt x 288.1164pt>
+File: ../figures//cases_histogram.png Graphic file (type png)
+<use ../figures//cases_histogram.png>
+Package pdftex.def Info: ../figures//cases_histogram.png  used on input line 33
+4.
+(pdftex.def)             Requested size: 411.14528pt x 225.78058pt.
+<../figures//cases_by_syndrome.png, id=211, 998.2896pt x 347.3778pt>
+File: ../figures//cases_by_syndrome.png Graphic file (type png)
+<use ../figures//cases_by_syndrome.png>
+Package pdftex.def Info: ../figures//cases_by_syndrome.png  used on input line 
+340.
+(pdftex.def)             Requested size: 314.40001pt x 109.39807pt.
+<../figures//cases_nooutliers_boxplot.png, id=212, 590.6868pt x 204.765pt>
+File: ../figures//cases_nooutliers_boxplot.png Graphic file (type png)
+<use ../figures//cases_nooutliers_boxplot.png>
+Package pdftex.def Info: ../figures//cases_nooutliers_boxplot.png  used on inpu
+t line 351.
+(pdftex.def)             Requested size: 411.14528pt x 142.53152pt.
+ [10 <../figures//cases_histogram.png> <../figures//cases_by_syndrome.png>] (..
+/tables/cfr_by_syndrome.tex
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \begin{table}[htbp]
+                       
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+)
+Overfull \hbox (0.73892pt too wide) in paragraph at lines 363--366
+ [][] 
+ []
+
+<../figures//cfr_combined.png, id=222, 566.115pt x 275.1078pt>
+File: ../figures//cfr_combined.png Graphic file (type png)
+<use ../figures//cfr_combined.png>
+Package pdftex.def Info: ../figures//cfr_combined.png  used on input line 370.
+(pdftex.def)             Requested size: 386.95897pt x 188.0489pt.
+[11 <../figures//cases_nooutliers_boxplot.png> <../figures//cfr_combined.png>]
+<../figures//compare_incubation_severity.png, id=232, 710.655pt x 275.1078pt>
+File: ../figures//compare_incubation_severity.png Graphic file (type png)
+<use ../figures//compare_incubation_severity.png>
+Package pdftex.def Info: ../figures//compare_incubation_severity.png  used on i
+nput line 388.
+(pdftex.def)             Requested size: 411.14528pt x 159.16803pt.
+<../figures//compare_incubation_syndrome.png, id=233, 710.1732pt x 275.1078pt>
+File: ../figures//compare_incubation_syndrome.png Graphic file (type png)
+<use ../figures//compare_incubation_syndrome.png>
+Package pdftex.def Info: ../figures//compare_incubation_syndrome.png  used on i
+nput line 394.
+(pdftex.def)             Requested size: 411.14528pt x 159.27298pt.
+<../figures//compare_hospital_severity.png, id=234, 706.3188pt x 275.1078pt>
+File: ../figures//compare_hospital_severity.png Graphic file (type png)
+<use ../figures//compare_hospital_severity.png>
+Package pdftex.def Info: ../figures//compare_hospital_severity.png  used on inp
+ut line 400.
+(pdftex.def)             Requested size: 411.14528pt x 160.13773pt.
+<../figures//compare_temp_biome.png, id=235, 706.8006pt x 491.9178pt>
+File: ../figures//compare_temp_biome.png Graphic file (type png)
+<use ../figures//compare_temp_biome.png>
+Package pdftex.def Info: ../figures//compare_temp_biome.png  used on input line
+ 406.
+(pdftex.def)             Requested size: 411.14528pt x 286.1532pt.
+<../figures//compare_rain_biome.png, id=236, 709.6914pt x 491.9178pt>
+File: ../figures//compare_rain_biome.png Graphic file (type png)
+<use ../figures//compare_rain_biome.png>
+Package pdftex.def Info: ../figures//compare_rain_biome.png  used on input line
+ 412.
+(pdftex.def)             Requested size: 411.14528pt x 284.98225pt.
+
+[12 <../figures//compare_incubation_severity.png> <../figures//compare_incubati
+on_syndrome.png>] [13 <../figures//compare_hospital_severity.png> <../figures//
+compare_temp_biome.png>]
+<../figures//critique_bar_vs_violin.png, id=254, 998.7714pt x 345.9324pt>
+File: ../figures//critique_bar_vs_violin.png Graphic file (type png)
+<use ../figures//critique_bar_vs_violin.png>
+Package pdftex.def Info: ../figures//critique_bar_vs_violin.png  used on input 
+line 425.
+(pdftex.def)             Requested size: 483.69687pt x 167.5342pt.
+ [14 <../figures//compare_rain_biome.png> <../figures//critique_bar_vs_violin.p
+ng>] (../tables/master_summary.tex
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \begin{table}[htbp]
+                       
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (126.66869pt too wide) in paragraph at lines 4--18
+[][] 
+ []
+
+)
+Overfull \hbox (0.73892pt too wide) in paragraph at lines 448--451
+ [][] 
+ []
+
+[15] (./detailed_report.aux)
+Package rerunfilecheck Info: File `detailed_report.out' has not changed.
+(rerunfilecheck)             Checksum: 30B86E7C693437F33948FC90C2D38035;6149.
+ ) 
+Here is how much of TeX's memory you used:
+ 12835 strings out of 480204
+ 209456 string characters out of 5895011
+ 501279 words of memory out of 5000000
+ 30479 multiletter control sequences out of 15000+600000
+ 480493 words of font info for 55 fonts, out of 8000000 for 9000
+ 36 hyphenation exceptions out of 8191
+ 69i,13n,117p,493b,489s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </home/souhail/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1440.6
+00pk> </home/souhail/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt120
+0.600pk> </home/souhail/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm
+1095.600pk> </home/souhail/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/e
+cbx1095.600pk> </home/souhail/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/e
+c/ectt1095.600pk> </home/souhail/.texlive2021/texmf-var/fonts/pk/ljfour/jknappe
+n/ec/ecbx1200.600pk> </home/souhail/.texlive2021/texmf-var/fonts/pk/ljfour/jkna
+ppen/ec/ecrm1095.600pk> </home/souhail/.texlive2021/texmf-var/fonts/pk/ljfour/j
+knappen/ec/ecbx1440.600pk> </home/souhail/.texlive2021/texmf-var/fonts/pk/ljfou
+r/jknappen/ec/ecrm1200.600pk> </home/souhail/.texlive2021/texmf-var/fonts/pk/lj
+four/jknappen/ec/ecrm1728.600pk></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmsy8.pfb>
+Output written on detailed_report.pdf (15 pages, 1279478 bytes).
+PDF statistics:
+ 743 PDF objects out of 1000 (max. 8388607)
+ 292 compressed objects within 3 object streams
+ 102 named destinations out of 1000 (max. 500000)
+ 317 words of extra memory for PDF output out of 10000 (max. 10000000)
+

@@ -1,0 +1,112 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[margin=2cm]{geometry}
+\usepackage{graphicx, booktabs, amsmath, hyperref, float, adjustbox, underscore}
+\hypersetup{colorlinks=true, linkcolor=blue, urlcolor=blue}
+
+\title{Hantavirus Data -- Descriptive Statistics Analysis}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+
+\section{Introduction}
+
+This project applies descriptive statistics concepts learned from a textbook to a real
+hantavirus dataset from Kaggle, as a practice project.
+
+Data source: \texttt{https://www.kaggle.com/datasets/zkskhurram/hantavirus-andes-virus-global-epidemiology}
+
+\noindent\textbf{Disclaimer:} This is a historical Kaggle dataset on hantavirus epidemiology, not the 2025 outbreak data. This project focuses on learning descriptive statistics, not on current events.
+
+\section{Data Cleaning}
+
+No data errors were found. Clinical symptoms have structural missingness by syndrome.
+All outliers (Table~\ref{tab:outliers}) were genuine extreme values, not errors.
+
+\section{Univariate Distribution Analysis}
+
+\subsection{Incubation Days}
+Right-skewed (skew=0.47), unimodal, thin tails. Mean=20.4d, Median=19d.
+Not normal. Incubation differs by syndrome: HPS (median=16d) vs HFRS (median=22d).
+
+\subsection{Hospital Days}
+Appears bimodal when aggregated -- an artifact of mixing four severity groups with
+distinct non-overlapping centers (Mild=2d, Moderate=6d, Severe=13d, Critical=21d).
+
+\subsection{ICU Days}
+Spike-and-slab: 50\% never admitted. Mild/Moderate never go to ICU;
+Severe/Critical always do. Among admitted: median=5d.
+
+\subsection{Environmental Variables}
+Temperature is approximately normal (skew=-0.15). Rainfall is right-skewed (skew=1.80),
+10x variation by biome. Rodent abundance is symmetric and constant across biomes.
+
+\subsection{Confirmed Cases}
+Extreme right skew (skew=2.82). Mean=1793, Median=58. Tail driven by China HFRS.
+
+\subsection{Case Fatality Rate}
+Bimodal by syndrome. HPS (28.1\%) is 20x more lethal than HFRS (1.4\%).
+
+\section{Comparative Analysis}
+Incubation is similar across severities but differs by syndrome. Hospital/ICU days
+separate cleanly by severity. Cases and CFR differ dramatically by syndrome.
+
+\section{Key Takeaways}
+\begin{enumerate}
+\item Check subgroups before describing a distribution
+\item For skewed data: median + IQR, not mean + std
+\item Spike-and-slab distributions need split analysis
+\item Mixing groups creates misleading aggregates
+\item Bar charts with error bars hide the truth
+\end{enumerate}
+
+\section{Tables}
+
+\begin{table}[htbp]
+\centering
+\resizebox{\textwidth}{!}{
+\input{../tables/master_summary.tex}
+}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\resizebox{\textwidth}{!}{
+\input{../tables/hospital_by_severity.tex}
+}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\resizebox{\textwidth}{!}{
+\input{../tables/icu_by_severity.tex}
+}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\resizebox{\textwidth}{!}{
+\input{../tables/cfr_by_syndrome.tex}
+}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\resizebox{\textwidth}{!}{
+\input{../tables/cases_by_region.tex}
+}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\resizebox{\textwidth}{!}{
+\input{../tables/outlier_summary.tex}
+}
+\end{table}
+
+\end{document}

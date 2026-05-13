@@ -1,0 +1,16 @@
+\begin{table}[htbp]
+\caption{Summary of visualization mistakes, why they failed, and what they were replaced with}
+\label{tab:mistakes}
+\begin{tabular}{llll}
+\toprule
+Mistake & Why it failed & Replaced with & Fixed by \\
+\midrule
+Beeswarm plot for discrete data & No vertical spread, couldn't see density & Box plot + Violin plot with box overlay & NaN \\
+Too many histogram bins (sqrt rule on integer data) & 86 bins for 35-day range → empty bins, 'comb' effect & Integer-aligned bins (discrete) or FD rule (continuous) & NaN \\
+KDE on discrete/bounded data & Density extends below 0 (impossible), subjective bandwidth & Log-transformed histogram for continuous; skip for integer & NaN \\
+Q-Q plot on bounded-at-zero data & Always shows deviation at lower tail (bounded vs unbounded) & ECDF + subgroup split; Q-Q only for unbounded variables & NaN \\
+Describing distribution without checking subgroups & Hospital days appeared bimodal → actually 4 unimodal severity groups & Always check subgroups before describing shape & NaN \\
+ECDF x-axis starting at -2000 & Cases can't be negative, misleading visualization & NaN & Set xlim starting at 0 \\
+\bottomrule
+\end{tabular}
+\end{table}
