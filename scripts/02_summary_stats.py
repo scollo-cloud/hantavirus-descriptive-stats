@@ -1,12 +1,13 @@
 """
 02_summary_stats.py — Summary statistics for every numeric column across all datasets
 """
-import numpy as np; np.random.seed(42)
-DATA_DIR = "../data"
+import os
+import sys
+sys.path.insert(0, os.path.dirname(__file__))
+
 import pandas as pd
 from scipy import stats
-import os
-
+from helper import DATA_DIR
 
 files = [
     "hantavirus_clinical.csv",
@@ -18,7 +19,12 @@ files = [
 ]
 
 for f in files:
-    df = pd.read_csv(os.path.join(DATA_DIR, f))
+    path = DATA_DIR / f
+    if not path.exists():
+        print(f"  ⚠ File not found: {path}")
+        continue
+
+    df = pd.read_csv(path)
     num_cols = df.select_dtypes(include=["int64", "float64"]).columns
     print(f"\n{'='*65}")
     print(f"  {f}")

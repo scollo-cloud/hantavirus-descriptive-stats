@@ -1,10 +1,12 @@
 """
 01_load_explore.py — Load each CSV, inspect structure, missing values, duplicates, and red flags
 """
-import numpy as np; np.random.seed(42)
-DATA_DIR = "../data"
-import pandas as pd
 import os
+import sys
+sys.path.insert(0, os.path.dirname(__file__))
+
+import pandas as pd
+from helper import DATA_DIR
 
 files = [
     "hantavirus_clinical.csv",
@@ -19,7 +21,11 @@ files = [
 ]
 
 for f in files:
-    path = os.path.join(DATA_DIR, f)
+    path = DATA_DIR / f
+    if not path.exists():
+        print(f"  ⚠ File not found: {path}")
+        continue
+
     df = pd.read_csv(path)
     print(f"\n{'='*60}")
     print(f"  File: {f}")
